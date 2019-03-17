@@ -67,7 +67,7 @@ def get(obj):
         "mime": dict()
     }
 
-    stream = " ".join(['{:02X}'.format(byte) for byte in obj])
+    stream = " ".join(['{:02X}'.format(ord(byte)) for byte in obj])
 
     for element in data:
         for signature in element["signature"]:
